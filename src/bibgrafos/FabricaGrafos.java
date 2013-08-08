@@ -41,20 +41,3 @@ public class FabricaGrafos {
         return g;
     }    
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
