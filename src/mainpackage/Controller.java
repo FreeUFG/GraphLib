@@ -24,26 +24,29 @@ import br.ufg.caj.graphlib.GLGraph;
 
 public class Controller {
 
+    /**
+    * It contains two minimal examples to use the library.
+    * 
+    * @author Esdras Lins Bispo Jr.
+    */
     public static void main(String[] args) {
         
-        GLGraph g;
+        GLGraph g1;
+        g1 = GLFactory.path(4);
+        g1.show();
         
-        g = GLFactory.path(4);
+        GLGraph g2 = new GLGraph("Circuit 4");
         
-        g.show();
+        g2.addVertex("a");
+        g2.addVertex("b");
+        g2.addVertex("c");
+        g2.addVertex("d");
         
-//        g = new Grafo();
-//        
-//        g.adVertice("a");
-//        g.adVertice("b");
-//        g.adVertice("c");
-//        g.adVertice("d");
-//        
-//        g.adAresta("a", "b");
-//        g.adAresta("b", "c");
-//        g.adAresta("c", "d");
-//        g.adAresta("d", "a");
-//        
-//        g.exibe();
+        g2.addEdge("a", "b");
+        g2.addEdge("b", "c");
+        g2.addEdge("c", "d");
+        g2.addEdge("d", "a");
+        
+        g2.show();
     }
 }

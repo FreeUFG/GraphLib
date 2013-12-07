@@ -24,26 +24,39 @@ import java.util.Set;
 
 public class GLGraph {
     //ATTRIBUTES
-    private Set<GLEdge> e;
     private Set<GLVertex> v;
+    private Set<GLEdge> e;
+    private String name;
     
     //CONSTRUCTORS
     public GLGraph(){
-        e = new HashSet<GLEdge>();
-        v = new HashSet<GLVertex>();
+        this.v = new HashSet<GLVertex>();
+        this.e = new HashSet<GLEdge>();
+        this.name = "";
+    }
+    public GLGraph(String name){
+        this.v = new HashSet<GLVertex>();
+        this.e = new HashSet<GLEdge>();
+        this.name = name;
     }
     //GETs AND SETs
+    public Set<GLVertex> getV(){
+        return this.v;
+    }
     public Set<GLEdge> getE(){
         return this.e;
     }
-    public Set<GLVertex> getV(){
-        return this.v;
+    public String getName(){
+        return this.name;
+    }
+    public void setV(Set<GLVertex> v){
+        this.v = v;
     }
     public void setE(Set<GLEdge> a){
         this.e = a;
     }
-    public void setV(Set<GLVertex> v){
-        this.v = v;
+    public void setName(String name){
+        this.name = name;
     }
     public int getN(){
         return this.v.size();
@@ -76,20 +89,37 @@ public class GLGraph {
         ares.setEndPoint(vNovo);
         this.e.add(ares);
     }
+    /**
+     * It shows vertex set (V) and edge set (E) in terminal.
+     * 
+     * @author Esdras Lins Bispo Jr.
+     */
     public void show(){
+        String output = "";
         
-        System.out.println("V = {");
-        for(GLVertex vt : this.v){
-            System.out.println("\t" + vt.getId());
+        //It prepares graph name
+        if(!this.name.isEmpty()){
+            output += "================================";
+            output += "Graph Name: " + this.name + "\n";
+            output += "================================";
         }
-        System.out.print("}");
         
-        System.out.println("A = {");
-        for(GLEdge ar : this.e){
-            System.out.println("\t" + ar.show());
+        //It prepares vertex set
+        output = "\nV = { ";
+        for(GLVertex vertex : this.v){
+            output += vertex.getId() + ", ";
         }
-        System.out.print("}");
+        output = output.substring(0, output.length() -2);
+        output += " }";
         
+        //It prepares edge set
+        output += "\nE = {";
+        for(GLEdge edgde : this.e){
+            output += edgde.show() + ", ";
+        }
+        output = output.substring(0, output.length() -2);
+        output += " }\n";
         
+        System.out.print(output);   //It shows in terminal
     }
 }

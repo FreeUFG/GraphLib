@@ -1,0 +1,22 @@
+    JavaDoc Example
+    /**
+    * Main method (Controller).
+    *
+    * @param theFromFile file from which a piece is being moved
+    * @param theFromRank rank from which a piece is being moved
+    * @param theToFile   file to which a piece is being moved
+    * @param theToRank   rank to which a piece is being moved
+    * @return            true if the move is valid, otherwise false
+    * </br>
+    * </br>
+    * <pre>
+    * =============================
+    * --------- EXAMPLE -----------
+    * =============================
+    * 
+    * char data[] = {'a', 'b', 'c'};
+    * String str = new String(data);
+    * 
+    * =============================
+    * </pre>
+    */
