@@ -99,13 +99,13 @@ public class GLGraph {
         
         //It prepares graph name
         if(!this.name.isEmpty()){
-            output += "================================";
+            output += "\n================================\n";
             output += "Graph Name: " + this.name + "\n";
             output += "================================";
         }
         
         //It prepares vertex set
-        output = "\nV = { ";
+        output += "\nV = { ";
         for(GLVertex vertex : this.v){
             output += vertex.getId() + ", ";
         }
