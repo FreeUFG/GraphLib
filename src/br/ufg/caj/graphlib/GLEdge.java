@@ -40,6 +40,18 @@ public class GLEdge {
         if(endPoint.length == 2)
             this.endPoint = endPoint;
     }
+    /**
+     * It verifies if the edge contains a given vertex.
+     * 
+     * @param vertex
+     * @return true, if the edge contains the vertex; or false, on the contrary.
+     */
+    public boolean contains(GLVertex vertex){
+        if(this.endPoint[0].equals(vertex) ||
+           this.endPoint[1].equals(vertex)      )
+            return true;
+        return false;
+    }
     public String show(){
         return "{" + this.endPoint[0].getId() + ", " + this.endPoint[1].getId() + "}";
     }

@@ -89,6 +89,17 @@ public class GLGraph {
         ares.setEndPoint(vNovo);
         this.e.add(ares);
     }
+    public int degreeOf(GLVertex vertex){
+        if(this.v.contains(vertex)){
+            int degree = 0;
+            for(GLEdge edge : this.e){
+                if(edge.contains(vertex))
+                    degree++;
+            }
+            return degree;
+        }
+        return -1;
+    }
     /**
      * It shows vertex set (V) and edge set (E) in terminal.
      * 

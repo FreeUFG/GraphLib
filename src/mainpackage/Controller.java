@@ -19,6 +19,7 @@
 
 package mainpackage;
 
+import br.ufg.caj.graphlib.GLAlgorithm;
 import br.ufg.caj.graphlib.GLFactory;
 import br.ufg.caj.graphlib.GLGraph;
 
@@ -34,6 +35,9 @@ public class Controller {
         GLGraph g1;
         g1 = GLFactory.path(4);
         g1.show();
+        if(GLAlgorithm.isRegular(g1))
+            System.out.println(g1.getName() + " is regular.");
+        else System.out.println(g1.getName() + " is not regular.");
         
         GLGraph g2 = new GLGraph("Circuit 4");
         
@@ -48,5 +52,8 @@ public class Controller {
         g2.addEdge("d", "a");
         
         g2.show();
+        if(GLAlgorithm.isRegular(g2))
+            System.out.println(g2.getName() + " is regular.");
+        else System.out.println(g2.getName() + " is not regular.");
     }
 }

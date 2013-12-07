@@ -25,6 +25,7 @@ public class GLFactory {
         
         GLGraph g = new GLGraph();
         
+        g.setName("K " + n);
         for(int i=1; i<=n; i++){
             g.addVertex("v" + i);
         }
@@ -41,6 +42,7 @@ public class GLFactory {
         
         GLGraph g = new GLGraph();
         
+        g.setName("Path " + (n-1));
         for(int i=1; i<=n; i++){
             g.addVertex("v" + i);
         }
@@ -55,6 +57,7 @@ public class GLFactory {
         
         GLGraph g = path(n);
         
+        g.setName("Circuit " + n);
         g.addEdge("v1", "v" + n);
         
         return g;
