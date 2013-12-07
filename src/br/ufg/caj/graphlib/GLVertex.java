@@ -25,6 +25,14 @@ public class GLVertex {
     //ATTRIBUTES
     private String id;
     
+    //CONSTRUCTORS
+    public GLVertex(){
+        
+    }
+    public GLVertex(String id){
+        this.id = id;
+    }
+    
     //GETs AND SETs
     public String getId(){
         return this.id;

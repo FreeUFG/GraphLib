@@ -30,13 +30,13 @@ public class GLGraph {
     
     //CONSTRUCTORS
     public GLGraph(){
-        this.v = new HashSet<GLVertex>();
-        this.e = new HashSet<GLEdge>();
+        this.v = new HashSet<>();
+        this.e = new HashSet<>();
         this.name = "";
     }
     public GLGraph(String name){
-        this.v = new HashSet<GLVertex>();
-        this.e = new HashSet<GLEdge>();
+        this.v = new HashSet<>();
+        this.e = new HashSet<>();
         this.name = name;
     }
     //GETs AND SETs
@@ -92,7 +92,7 @@ public class GLGraph {
     /**
      * It shows vertex set (V) and edge set (E) in terminal.
      * 
-     * @author Esdras Lins Bispo Jr.
+     * @author Esdras Bispo Jr.
      */
     public void show(){
         String output = "";

@@ -19,28 +19,24 @@
 
 package br.ufg.caj.graphlib;
 
-public class GLEdge {
-    //ATTRIBUTES
-    private GLVertex endPoint[];
-    
-    //CONSTRUCTORS
-    public GLEdge(){
-        this.endPoint = new GLVertex[2];
-    }
-    public GLEdge(String endPoint1, String endPoint2){
-        this.endPoint = new GLVertex[2];
-        this.endPoint[0] = new GLVertex(endPoint1);
-        this.endPoint[1] = new GLVertex(endPoint2);
-    }
-    //GETs AND SETs
-    public GLVertex[] getEndPoint(){
-        return this.endPoint;
-    }
-    public void setEndPoint(GLVertex endPoint[]){
-        if(endPoint.length == 2)
-            this.endPoint = endPoint;
-    }
-    public String show(){
-        return "{" + this.endPoint[0].getId() + ", " + this.endPoint[1].getId() + "}";
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class GLEdgeTest {
+
+    /**
+     * Test of getEndPoint method, of class GLEdge.
+     * @author Esdras Bispo Jr.
+     */
+    @Test
+    public void testGetEndPoint() {
+        GLEdge instance = new GLEdge("IdValue1", "IdValue2");
+        
+        GLVertex[] expResult = new GLVertex[2];
+        expResult[0] = new GLVertex("IdValue1");
+        expResult[1] = new GLVertex("IdValue2");
+        
+        GLVertex[] result = instance.getEndPoint();
+        assertArrayEquals(expResult, result);
     }
 }
