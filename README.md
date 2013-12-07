@@ -1,4 +1,4 @@
-BibGrafos
+GraphLib
 =========
 
-Biblioteca experimental criada na disciplina de Teoria dos Grafos na Universidade Federal de Goiás (UFG) Câmpus Jataí.
+Experimental library created in Graph Theory course in Federal University of Goiás (UFG), Jataí Campus.
